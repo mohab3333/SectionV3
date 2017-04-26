@@ -199,7 +199,8 @@ String connectionstring = "jdbc:mysql://localhost/JavaSection";
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 selectTable();
     }//GEN-LAST:event_jButton1ActionPerformed
-private void selectTable()
+// Refresh Table items
+    private void selectTable()
 {
 Connection con;
         try {
@@ -226,9 +227,9 @@ Connection con;
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
-
+// Insert to Database
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+        
         String fname = jTextField2.getText();
         String lname = jTextField3.getText();
         int phone = Integer.parseInt(jTextField4.getText());
@@ -248,7 +249,7 @@ Connection con;
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
-
+// validate Email
     private void jTextField5FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField5FocusLost
         if (!validate(jTextField5.getText())) {
             JOptionPane.showMessageDialog(null,"Wrong Mail");
@@ -256,7 +257,7 @@ Connection con;
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5FocusLost
-
+// Update selected user data
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
         String fname = jTextField2.getText();
@@ -273,7 +274,7 @@ Connection con;
         } catch (SQLException ex) {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
-
+// Delete Slected User
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
     String val= jTable1.getValueAt(jTable1.getSelectedRow(),0).toString();
         try {
